@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book a Bus</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+	  <a class="navbar-brand" href="#">Bus Booking System</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Bookings</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Contact Us</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div class="container mt-5">
+		<h2>Book a Bus</h2>
+		<form method="post" action="booking.php">
+			<div class="form-group">
+				<label for="from">From:</label>
+				<input type="text" class="form-control" id="from" name="from" placeholder="Enter starting location">
+			</div>
+			<div class="form-group">
+				<label for="to">To:</label>
+				<input type="text" class="form-control" id="to" name="to" placeholder="Enter destination">
+			</div>
+			<div class="form-group">
+				<label for="date">Date:</label>
+				<input type="date" class="form-control" id="date" name="date">
+			</div>
+			<div class="form-group">
+				<label for="bus">Select a Bus:</label>
+				<select class="form-control" id="bus" name="bus">
+					<option value="">--Select a Bus--</option>
+					<option value="1">Bus A</option>
+					<option value="2">Bus B</option>
+					<option value="3">Bus C</option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-primary">Book Now</button>
+		</form>
+	</div>
+
+	<!-- Footer -->
+	<footer class="page-footer font-small bg-dark text-white mt-5">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-12 text-center">
+	        <p>Contact Us: example@example.com</p>
+	      </div>
+	    </div>
+	  </div>
+	</footer>
+
+</body>
+</html>
