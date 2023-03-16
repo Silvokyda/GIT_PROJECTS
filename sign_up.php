@@ -12,8 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   
   // Connect to the database
   $db_host = 'localhost';
-  $db_user = 'your_db_username';
-  $db_pass = 'your_db_password';
+  $db_user = 'root';
+  $db_pass = '';
   $db_name = 'booking_system';
   $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
   
