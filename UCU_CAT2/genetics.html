@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BIOLOGY | UCU CAT 2</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI library -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <h1><center>Biology | GROUP 34</center></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cell_biology.html">Cell Biology</a></li>
+          <li><a href="genitics.html">Genetics</a></li>
+          <li><a href="ecology.html">Ecology</a></li>
+          <li><a href="anatomy.html">Human Anatomy</a></li>
+        </ul>
+      </nav>
+    </header>
+     <main>
+      <div class="the_content">
+        <div class="content">
+        <section>
+          <h2>What is Genetics?</h2>
+          <p>The branch of biology that studies the heredity and variation of inherited traits in living organisms. It involves the study of genes, DNA, chromosomes, and genetic variation, and how they are passed down from one generation to the next. Genetics helps us understand how traits are inherited from parents to offspring, and how the expression of those traits can be influenced by various factors, including the environment. It also plays a crucial role in many areas of biology and medicine, including the study of evolution, the diagnosis and treatment of genetic disorders, and the development of genetic engineering techniques.</p>
+        </section>
+
+        <section>
+          <h2>DNA (Deoxyribonucleic Acid)</h2>
+          <p>The genetic material that carries the hereditary information in all living organisms. Understanding the structure, replication, and function of DNA is crucial to understanding genetics</p>
+        </section>
+
+        <section>
+          <h2>Chromosomes</h2>
+          <p>Cell organelles are specialized structures within a cell that carry out specific functions necessary for the survival of the cell and the organism as a whole. Different types of cells have different organelles, and some organelles are only present in certain types of cells.</p>
+        </section>
+
+        <section>
+          <h2>Genetic Disorders</h2>
+          <p>conditions caused by mutations or abnormalities in genes or chromosomes. Understanding the causes, inheritance patterns, and treatments of genetic disorders is an important aspect of genetics.</p>
+        </section>
+
+        <section>
+          <h2>Genetic Engineering</h2>
+          <p>The deliberate modification of an organism's genetic material using biotechnology. The study of genetic engineering techniques and their applications is an important aspect of modern genetics.</p>
+        </section>
+      </div>
+    </div>
+
+        <section class="vidz" >
+          <button class="close-btn" onclick="closeHover()">X</button>
+          <h2>Educational Videos</h2>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="video-wrapper">
+                <iframe width=300px height=200px src="https://www.youtube-nocookie.com/embed/LFyjJBiltFI?start=19" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p style="text-align: justify;">In this session, we will be discussing various aspects of the cell, starting with a basic understanding of what a cell is. We will also explore the discovery of the cell, including the early observations of unicellular and multi-cellular organisms. We will delve into the concepts of organisms, organs, and tissues, examining how they are composed of cells. We will take a closer look at the invention of the microscope and how it allowed Robert Hooke to first observe and describe the cell. Finally, we will conclude by discussing the components of the cell, exploring the complex structures that make up this fundamental unit of life.</p>
+            </div>
+            <div class="mySlides fade">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vwAJ8ByQH2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p style="text-align: justify;">This series is a collection of animated videos demonstrating the fundamentals of cell biology and genetics. Topics include ultra structure of the prokaryotic and eukaryotic cells, concepts of molecular biology such as DNA replication and protein synthesis, structure and function of chromosomes and the cell cycle.</p>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+          <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+            }
+            // add an event listener to the close button
+            document.querySelector('.close-btn').addEventListener('click', function() {
+              // hide the vidz section
+              document.querySelector('.vidz').style.display = 'none';
+            });
+
+            // add an event listener to the vidz section to make it draggable
+            document.querySelector('.vidz').addEventListener('mousedown', function(event) {
+              // get the starting position of the mouse cursor
+              const initialX = event.clientX;
+              const initialY = event.clientY;
+
+              // get the starting position of the vidz section
+              const initialLeft = parseFloat(getComputedStyle(document.querySelector('.vidz')).left);
+              const initialTop = parseFloat(getComputedStyle(document.querySelector('.vidz')).top);
+
+              // set the vidz section to be draggable
+              document.onmousemove = function(event) {
+                // calculate the new position of the vidz section based on the mouse movement
+                const newX = initialLeft + event.clientX - initialX;
+                const newY = initialTop + event.clientY - initialY;
+
+                // set the new position of the vidz section
+                document.querySelector('.vidz').style.left = newX + 'px';
+                document.querySelector('.vidz').style.top = newY + 'px';
+              };
+
+              // stop dragging when the mouse button is released
+              document.onmouseup = function() {
+                document.onmousemove = null;
+              };
+            });
+          </script>
+        </section>
+
+      </main>
+      <section class="chat">
+        <script type="text/javascript">
+          var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+          (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/6419532c31ebfa0fe7f3c257/1gs1epqna';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+          })();
+
+          // Get the close button
+          var closeBtn = modal.querySelector('.close');
+
+          // When the user clicks the chat button, open the modal
+          chatBtn.addEventListener('click', function() {
+            modal.style.display = 'block';
+          });
+
+          // When the user clicks the close button, close the modal
+          closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+          });
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+              modal.style.display = 'none';
+            }
+          });
+
+          // Get the chat input and form elements
+          var chatInput = document.querySelector('#chat-input');
+          var chatForm = document.querySelector('#chat-form');
+
+          // When the user submits the chat form, add the message
+          chatForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            var message = chatInput.value;
+            Tawk_API.sendMessage(message);
+            chatInput.value = '';
+          });
+        </script>
+      </section>
+
+    <footer>
+      <p><center>Developed by: SILVANUS OWINO, LORINE ATIENO, HOSEA BARASA, KARANJA JAMES, SUSAN TERTA, RICHARD MANONO, LILIAN CHEBET and FRESHIA FIONA</center></p>
+      <p><center><a href="about_us.html">About</a> | <a href="contact.html">Contact</a></center></p>
+      <p><center>Copyright © 2023</center></p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BIOLOGY | UCU CAT 2</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI library -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <h1><center>Biology | GROUP 34</center></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cell_biology.html">Cell Biology</a></li>
+          <li><a href="genetics.html">Genetics</a></li>
+          <li><a href="ecology.html">Ecology</a></li>
+          <li><a href="anatomy.html">Human Anatomy</a></li>
+        </ul>
+      </nav>
+    </header>
+     <main>
+      <div class="the_content">
+        <div class="content">
+        <section>
+          <h2>What is Cell Biology?</h2>
+          <p>Cell biology is a field of study that focuses on the structure, function, and behavior of cells - the basic unit of life. It encompasses a wide range of topics, including the organization of cells, their chemical and physical properties, their interactions with other cells, and their responses to different stimuli. Cell biology seeks to understand the complex mechanisms that underlie cellular processes such as growth, division, and differentiation, as well as the roles of cells in development, disease, and evolution. This knowledge is essential for developing new treatments for diseases, understanding the origins of life, and advancing our understanding of the natural world.</p>
+        </section>
+
+        <section>
+          <h2>The Cell</h2>
+          <p>The cell is the basic unit of life and is considered the smallest functional and structural unit of all living organisms. Cells can be classified into two main types - prokaryotic and eukaryotic - based on their internal structures. Prokaryotic cells are simple in structure, lack a nucleus and other membrane-bound organelles, and are found in bacteria and archaea. Eukaryotic cells, on the other hand, are more complex, have a nucleus and other membrane-bound organelles, and are found in animals, plants, fungi, and protists. All cells contain genetic material, either in the form of DNA or RNA, and are capable of carrying out metabolic processes to sustain life. Cells are able to interact with their environment through the exchange of nutrients, waste products, and signaling molecules.</p>
+        </section>
+
+        <section>
+          <h2>Cell Organelles</h2>
+          <p>Cell organelles are specialized structures within a cell that carry out specific functions necessary for the survival of the cell and the organism as a whole. Different types of cells have different organelles, and some organelles are only present in certain types of cells.</p>
+        </section>
+
+        <section>
+          <h2>Cell Processes</h2>
+          <p>Cell processes are the various biological activities that occur within a cell, which are essential for its survival, growth, and reproduction. These processes include metabolism, which involves the conversion of nutrients into energy and other molecules needed by the cell, and the synthesis of new molecules, such as proteins and nucleic acids. Other important processes include cell division, where a single cell divides into two or more daughter cells, and cell differentiation, where unspecialized cells become specialized to perform specific functions in the organism. In addition, cells also carry out processes such as signal transduction, where signals from the environment are detected and transmitted within the cell, and apoptosis, a programmed cell death process that eliminates damaged or unnecessary cells</p>
+        </section>
+
+        <section>
+          <h2>Applications of Cell Biology</h2>
+          <p>Cell biology has a wide range of practical applications in fields such as medicine, biotechnology, and agriculture. Understanding the structure and function of cells is critical for the development of new drugs and therapies, as well as for the diagnosis and treatment of diseases. In biotechnology, cell biology is used to produce genetically engineered products such as vaccines, enzymes, and hormones, as well as to develop new diagnostic tools and imaging techniques. In agriculture, cell biology is used to develop new crop varieties that are more resistant to pests and diseases, as well as to improve the efficiency of crop production through genetic engineering and biotechnology.</p>
+        </section>
+      </div>
+    </div>
+
+        <section class="vidz" >
+          <button class="close-btn" onclick="closeHover()">X</button>
+          <h2>Educational Videos</h2>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="video-wrapper">
+                <iframe width=300px height=200px src="https://www.youtube-nocookie.com/embed/LFyjJBiltFI?start=19" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p style="text-align: justify;">In this session, we will be discussing various aspects of the cell, starting with a basic understanding of what a cell is. We will also explore the discovery of the cell, including the early observations of unicellular and multi-cellular organisms. We will delve into the concepts of organisms, organs, and tissues, examining how they are composed of cells. We will take a closer look at the invention of the microscope and how it allowed Robert Hooke to first observe and describe the cell. Finally, we will conclude by discussing the components of the cell, exploring the complex structures that make up this fundamental unit of life.</p>
+            </div>
+            <div class="mySlides fade">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vwAJ8ByQH2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p style="text-align: justify;">This series is a collection of animated videos demonstrating the fundamentals of cell biology and genetics. Topics include ultra structure of the prokaryotic and eukaryotic cells, concepts of molecular biology such as DNA replication and protein synthesis, structure and function of chromosomes and the cell cycle.</p>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+          <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+            }
+            // add an event listener to the close button
+            document.querySelector('.close-btn').addEventListener('click', function() {
+              // hide the vidz section
+              document.querySelector('.vidz').style.display = 'none';
+            });
+
+            // add an event listener to the vidz section to make it draggable
+            document.querySelector('.vidz').addEventListener('mousedown', function(event) {
+              // get the starting position of the mouse cursor
+              const initialX = event.clientX;
+              const initialY = event.clientY;
+
+              // get the starting position of the vidz section
+              const initialLeft = parseFloat(getComputedStyle(document.querySelector('.vidz')).left);
+              const initialTop = parseFloat(getComputedStyle(document.querySelector('.vidz')).top);
+
+              // set the vidz section to be draggable
+              document.onmousemove = function(event) {
+                // calculate the new position of the vidz section based on the mouse movement
+                const newX = initialLeft + event.clientX - initialX;
+                const newY = initialTop + event.clientY - initialY;
+
+                // set the new position of the vidz section
+                document.querySelector('.vidz').style.left = newX + 'px';
+                document.querySelector('.vidz').style.top = newY + 'px';
+              };
+
+              // stop dragging when the mouse button is released
+              document.onmouseup = function() {
+                document.onmousemove = null;
+              };
+            });
+          </script>
+        </section>
+
+      </main>
+      <section class="chat">
+        <script type="text/javascript">
+          var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+          (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/6419532c31ebfa0fe7f3c257/1gs1epqna';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+          })();
+
+          // Get the close button
+          var closeBtn = modal.querySelector('.close');
+
+          // When the user clicks the chat button, open the modal
+          chatBtn.addEventListener('click', function() {
+            modal.style.display = 'block';
+          });
+
+          // When the user clicks the close button, close the modal
+          closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+          });
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+              modal.style.display = 'none';
+            }
+          });
+
+          // Get the chat input and form elements
+          var chatInput = document.querySelector('#chat-input');
+          var chatForm = document.querySelector('#chat-form');
+
+          // When the user submits the chat form, add the message
+          chatForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            var message = chatInput.value;
+            Tawk_API.sendMessage(message);
+            chatInput.value = '';
+          });
+        </script>
+      </section>
+
+    <footer>
+      <p><center>Developed by: SILVANUS OWINO, LORINE ATIENO, HOSEA BARASA, KARANJA JAMES, SUSAN TERTA, RICHARD MANONO, LILIAN CHEBET and FRESHIA FIONA</center></p>
+      <p><center><a href="about_us.html">About</a> | <a href="contact.html">Contact</a></center></p>
+      <p><center>Copyright © 2023</center></p>
+    </footer>
+
+  </body>
+</html>

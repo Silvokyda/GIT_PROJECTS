@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BIOLOGY | UCU CAT 2</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI library -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <h1><center>Biology | GROUP 34</center></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cell_biology.html">Cell Biology</a></li>
+          <li><a href="genetics.html">Genetics</a></li>
+          <li><a href="ecology.html">Ecology</a></li>
+          <li><a href="anatomy.html">Human Anatomy</a></li>
+        </ul>
+      </nav>
+    </header>
+     <main>
+      <div class="the_content">
+        <div class="content">
+        <section>
+          <h2>What is Ecology?</h2>
+          <p>This is the study of how living organisms interact with each other and with their environment. It is a branch of biology that focuses on understanding the relationships between organisms and their physical and biological surroundings. Ecologists study everything from individual species to entire ecosystems, and they use a variety of tools and techniques to investigate these complex relationships. Ecology encompasses a wide range of topics, including biodiversity, conservation, climate change, population dynamics, food webs, and much more. Ecologists may work in a variety of settings, from academic research institutions to government agencies to non-profit organizations, and their work is essential for understanding and addressing many of the pressing environmental challenges facing the world today.</p>
+        </section>
+
+        <section>
+          <h2>An Ecosystem</h2>
+          <p>A community of living and non-living things that interact with each other in a specific environment. Understanding the interactions between organisms in an ecosystem is crucial to understanding ecology.</p>
+        </section>
+
+        <section>
+          <h2>Biodiversity</h2>
+          <p>The variety of life on Earth, including the number of different species, genes, and ecosystems. Biodiversity is important for maintaining the health and functioning of ecosystems, as well as for providing a wide range of ecosystem services that humans rely on, such as food, medicine, and clean water. Biodiversity is threatened by human activities such as habitat destruction, pollution, and climate change, and conservation efforts are essential for protecting and preserving the natural world.</p>
+        </section>
+
+        <section>
+          <h2>Habitat</h2>
+          <p>A habitat is the natural environment where an organism lives, including its physical surroundings and the other organisms that live there. The characteristics of a habitat can have a major impact on the survival and reproductive success of a species, as different species have different habitat requirements. Changes to a habitat, such as deforestation or pollution, can have negative impacts on the organisms that live there and can lead to declines in biodiversity.</p>
+        </section>
+
+        <section>
+          <h2>Niche</h2>
+          <p>The role that an organism plays within its ecosystem, including its interactions with other organisms and its use of resources. Each species has its own niche within its ecosystem, and competition for resources and space can be intense. Understanding the niches of different species is important for predicting how they will respond to changes in their environment, such as the introduction of a new species or changes in climate.</p>
+        </section>
+      </div>
+    </div>
+
+        <section class="vidz" >
+          <button class="close-btn" onclick="closeHover()">X</button>
+          <h2>Educational Videos</h2>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="video-wrapper">
+                <iframe width=300px height=200px src="https://www.youtube-nocookie.com/embed/LFyjJBiltFI?start=19" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p style="text-align: justify;">In this session, we will be discussing various aspects of the cell, starting with a basic understanding of what a cell is. We will also explore the discovery of the cell, including the early observations of unicellular and multi-cellular organisms. We will delve into the concepts of organisms, organs, and tissues, examining how they are composed of cells. We will take a closer look at the invention of the microscope and how it allowed Robert Hooke to first observe and describe the cell. Finally, we will conclude by discussing the components of the cell, exploring the complex structures that make up this fundamental unit of life.</p>
+            </div>
+            <div class="mySlides fade">
+              <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vwAJ8ByQH2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p style="text-align: justify;">This series is a collection of animated videos demonstrating the fundamentals of cell biology and genetics. Topics include ultra structure of the prokaryotic and eukaryotic cells, concepts of molecular biology such as DNA replication and protein synthesis, structure and function of chromosomes and the cell cycle.</p>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+          <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+            }
+            // add an event listener to the close button
+            document.querySelector('.close-btn').addEventListener('click', function() {
+              // hide the vidz section
+              document.querySelector('.vidz').style.display = 'none';
+            });
+
+            // add an event listener to the vidz section to make it draggable
+            document.querySelector('.vidz').addEventListener('mousedown', function(event) {
+              // get the starting position of the mouse cursor
+              const initialX = event.clientX;
+              const initialY = event.clientY;
+
+              // get the starting position of the vidz section
+              const initialLeft = parseFloat(getComputedStyle(document.querySelector('.vidz')).left);
+              const initialTop = parseFloat(getComputedStyle(document.querySelector('.vidz')).top);
+
+              // set the vidz section to be draggable
+              document.onmousemove = function(event) {
+                // calculate the new position of the vidz section based on the mouse movement
+                const newX = initialLeft + event.clientX - initialX;
+                const newY = initialTop + event.clientY - initialY;
+
+                // set the new position of the vidz section
+                document.querySelector('.vidz').style.left = newX + 'px';
+                document.querySelector('.vidz').style.top = newY + 'px';
+              };
+
+              // stop dragging when the mouse button is released
+              document.onmouseup = function() {
+                document.onmousemove = null;
+              };
+            });
+          </script>
+        </section>
+
+      </main>
+      <section class="chat">
+        <script type="text/javascript">
+          var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+          (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/6419532c31ebfa0fe7f3c257/1gs1epqna';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+          })();
+
+          // Get the close button
+          var closeBtn = modal.querySelector('.close');
+
+          // When the user clicks the chat button, open the modal
+          chatBtn.addEventListener('click', function() {
+            modal.style.display = 'block';
+          });
+
+          // When the user clicks the close button, close the modal
+          closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+          });
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+              modal.style.display = 'none';
+            }
+          });
+
+          // Get the chat input and form elements
+          var chatInput = document.querySelector('#chat-input');
+          var chatForm = document.querySelector('#chat-form');
+
+          // When the user submits the chat form, add the message
+          chatForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            var message = chatInput.value;
+            Tawk_API.sendMessage(message);
+            chatInput.value = '';
+          });
+        </script>
+      </section>
+
+    <footer>
+      <p><center>Developed by: SILVANUS OWINO, LORINE ATIENO, HOSEA BARASA, KARANJA JAMES, SUSAN TERTA, RICHARD MANONO, LILIAN CHEBET and FRESHIA FIONA</center></p>
+      <p><center><a href="about_us.html">About</a> | <a href="contact.html">Contact</a></center></p>
+      <p><center>Copyright © 2023</center></p>
+    </footer>
+
+  </body>
+</html>
