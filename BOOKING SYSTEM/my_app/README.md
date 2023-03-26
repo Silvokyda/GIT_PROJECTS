@@ -7,16 +7,12 @@ The project was created out of a passion for coding and an interest in developin
 # Technologies Used
 The following technologies were used to build this project:
 
-1. React: for the front-end user interface
-   ![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
-2. Node.js: for the server-side logic and API endpoints
-   ![Node.js Logo](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg)
-3. MongoDB: for the database
-   ![MongoDB Logo](https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/1200px-MongoDB-Logo.svg.png)
-4. Express: for building the server and creating API endpoints
-   ![Express Logo](https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png)
-5. Bootstrap: for responsive and modern styling
-   ![Bootstrap Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png)
+1. <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" width="50px"/> for the front-end user interface
+2. <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js Logo" width="50px"/> for the server-side logic and API endpoints
+3. <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/1200px-MongoDB-Logo.svg.png" alt="MongoDB Logo" width="50px"/> for the database
+4. <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" alt="Express Logo" width="50px"/> for building the server and creating API endpoints
+5. <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" alt="Bootstrap Logo" width="50px"/> for responsive and modern styling
+
 
 # Features
 The hotel reservation system includes the following features:
