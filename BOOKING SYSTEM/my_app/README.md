@@ -7,20 +7,25 @@ The project was created out of a passion for coding and an interest in developin
 # Technologies Used
 The following technologies were used to build this project:
 
-React: for the front-end user interface
-Node.js: for the server-side logic and API endpoints
-MongoDB: for the database
-Express: for building the server and creating API endpoints
-Bootstrap: for responsive and modern styling
+1. React: for the front-end user interface
+   ![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
+2. Node.js: for the server-side logic and API endpoints
+   ![Node.js Logo](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg)
+3. MongoDB: for the database
+   ![MongoDB Logo](https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/1200px-MongoDB-Logo.svg.png)
+4. Express: for building the server and creating API endpoints
+   ![Express Logo](https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png)
+5. Bootstrap: for responsive and modern styling
+   ![Bootstrap Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png)
 
 # Features
 The hotel reservation system includes the following features:
 
-User authentication: users can create an account and log in to view their reservations
-Search functionality: users can search for hotel rooms based on their desired check-in and check-out dates
-Room availability: the system displays available rooms and their prices based on the selected check-in and check-out dates
-Reservation management: users can view, modify, and cancel their reservations
-Email notifications: users receive email notifications for reservation confirmations and cancellations
+1. User authentication: users can create an account and log in to view their reservations
+2. Search functionality: users can search for hotel rooms based on their desired check-in and check-out dates
+3. Room availability: the system displays available rooms and their prices based on the selected check-in and check-out dates
+4. Reservation management: users can view, modify, and cancel their reservations
+5. Email notifications: users receive email notifications for reservation confirmations and cancellations
 # Usage
 To use the hotel reservation system, simply clone the repository and follow the instructions in the README files for both the front-end and back-end applications.
 
