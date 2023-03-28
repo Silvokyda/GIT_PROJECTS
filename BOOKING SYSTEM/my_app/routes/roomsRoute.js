@@ -14,4 +14,17 @@ router.get("/getallrooms",async(req, res) => {
     
 )
 
+router.get("/getroombyid",async(req, res) => {
+
+    const roomid = req.body.roomid
+
+    try {
+        const room = await room.findOne({_id : roomid})
+        res.send(rooms)
+    } catch (error) {
+        return res.status(400).json({message: error });
+    }}
+    
+)
+
 module.exports = router;
