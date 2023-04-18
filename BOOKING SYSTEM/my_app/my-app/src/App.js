@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/home" element={<Homescreen />} />
-          <Route path="/book/:roomid" exact Component={Bookingscreen}/>
+          <Route path="/bookings/:roomid" render={(props) => <Bookingscreen {...props} />} />
         </Routes>
       </BrowserRouter>
     </div>

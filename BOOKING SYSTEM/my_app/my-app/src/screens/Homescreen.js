@@ -13,6 +13,7 @@ function Homescreen() {
         setLoading(true);
         const response = await axios.get("/api/rooms/getallrooms");
         const data = response.data;
+        console.log(data);
         setRooms(data);
         setLoading(false);
       } catch (error) {

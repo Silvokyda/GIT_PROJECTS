@@ -31,6 +31,6 @@ const roomSchema = mongoose.Schema({
     timestamps : true
 })
 
-const roonModel = mongoose.model('rooms', roomSchema)
+const roomModel = mongoose.model('rooms', roomSchema)
 
-module.exports = roonModel
+module.exports = roomModel
