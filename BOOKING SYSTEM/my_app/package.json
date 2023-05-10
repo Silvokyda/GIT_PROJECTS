@@ -12,9 +12,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "This is a full-stack hotel reservation system built using React for the front end, Node.js for the backend, and MongoDB as the database. The system allows users to search for and book hotel rooms based on their desired check-in and check-out dates, and displays the available rooms and their respective prices."
 }
