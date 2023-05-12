@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-function Bookingscreen({ match }) {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [room, setRoom] = useState(null);
+function Bookingscreen() {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState();
+  const [room, setRoom] = useState();
+
+  const { roomid } = useParams();
 
   useEffect(() => {
     const fetchRoom = async () => {
       try {
         setLoading(true);
-        const response = await axios.post('/api/rooms/getroombyid', { roomid: match.params.roomid });
-        const data = response.data.data;
+        const response = await axios.post('/api/rooms/getroombyid', { roomid });
+        const data = response.data;
         setRoom(data);
         setLoading(false);
       } catch (error) {
@@ -22,7 +25,7 @@ function Bookingscreen({ match }) {
     };
 
     fetchRoom();
-  }, [match.params.roomid]);
+  }, [roomid]);
 
   return (
     <div>
@@ -30,21 +33,47 @@ function Bookingscreen({ match }) {
         <h1>Loading...</h1>
       ) : error ? (
         <h1>Error loading room data</h1>
-      ) : room ? (
+      ) : (
         <div>
           <div className="row">
+
             <div className="col-md-5">
-              <h1>{room.name}</h1>
-              <img src={room.imageurls[0]} className="bigimg" alt="View from the window" />
+              {room && room.name && <h1>{room.name}</h1>}
+              {room && room.imageurls && room.imageurls[0] && (
+                <img src={room.imageurls[0]} className="bigimg" alt="loading" />
+              )}
             </div>
+
             <div className="col-md-5">
-              <h1>{room.name}</h1>
-              <img src={room.imageurls[1]} alt="Bedroom interior" />
+
+              <div>
+                <h1>Booking Details</h1>
+                <b>
+                  <hr />
+                  <p>Name : </p>
+                  <p>From Date : </p>
+                  <p>To Date :  </p>
+                  <p>Max Count : {room && room.maxcount}</p>
+                </b>
+              </div>
+
+              <div>
+                <b>
+                  <h1>Amount</h1>
+                  <hr />
+                  <p> Total Days : </p>
+                  <p> Rent per day : {room.rentperday} </p>
+                  <p> Total Amount : </p>
+                </b>
+              </div>
+
+              <div>
+                <button className="btn btn-primary">Pay Now</button>
+              </div>
+
             </div>
           </div>
         </div>
-      ) : (
-        <h1>Room not found</h1>
       )}
     </div>
   );
