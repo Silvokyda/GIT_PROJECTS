@@ -35,7 +35,7 @@ function Bookingscreen() {
         <h1>Error loading room data</h1>
       ) : (
         <div>
-          <div className="row">
+          <div className="row justify-content-center mt-5 bs">
 
             <div className="col-md-5">
               {room && room.name && <h1>{room.name}</h1>}
@@ -46,7 +46,7 @@ function Bookingscreen() {
 
             <div className="col-md-5">
 
-              <div>
+              <div style={{ textAlign: 'right' }}>
                 <h1>Booking Details</h1>
                 <b>
                   <hr />
@@ -57,7 +57,7 @@ function Bookingscreen() {
                 </b>
               </div>
 
-              <div>
+              <div style={{ textAlign: 'right' }}>
                 <b>
                   <h1>Amount</h1>
                   <hr />
@@ -67,7 +67,7 @@ function Bookingscreen() {
                 </b>
               </div>
 
-              <div>
+              <div style={{ float: 'right' }}>
                 <button className="btn btn-primary">Pay Now</button>
               </div>
 
