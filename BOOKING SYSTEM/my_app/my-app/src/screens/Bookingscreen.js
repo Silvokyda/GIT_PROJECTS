@@ -28,7 +28,7 @@ function Bookingscreen() {
   }, [roomid]);
 
   return (
-    <div>
+    <div className='m-5'>
       {loading ? (
         <h1>Loading...</h1>
       ) : error ? (
@@ -37,14 +37,14 @@ function Bookingscreen() {
         <div>
           <div className="row justify-content-center mt-5 bs">
 
-            <div className="col-md-5">
+            <div className="col-md-6">
               {room && room.name && <h1>{room.name}</h1>}
               {room && room.imageurls && room.imageurls[0] && (
                 <img src={room.imageurls[0]} className="bigimg" alt="loading" />
               )}
             </div>
 
-            <div className="col-md-5">
+            <div className="col-md-6">
 
               <div style={{ textAlign: 'right' }}>
                 <h1>Booking Details</h1>
