@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Loader from '../components/Loader';
+
 
 function Bookingscreen() {
   const [loading, setLoading] = useState(true);
@@ -30,9 +32,9 @@ function Bookingscreen() {
   return (
     <div className='m-5'>
       {loading ? (
-        <h1>Loading...</h1>
+        <h1><Loader /></h1>
       ) : error ? (
-        <h1>Error loading room data</h1>
+        <h1><Error /></h1>
       ) : (
         <div>
           <div className="row justify-content-center mt-5 bs">
