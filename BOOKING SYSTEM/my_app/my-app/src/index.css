@@ -57,10 +57,10 @@ h1{
   border-radius: 5px !important;
 }
 
-.input{
+.form-control{
   box-shadow: none !important;
   margin-top: 10px;
-  border: 1px;
+  border: 2px solid black !important;
 }
 
 h2{

@@ -5,7 +5,7 @@ function Loader() {
     let [loading, setLoading] = useState(true);
     
   return (
-    <div styl={{marginTop: '50 px'}}>
+    <div style={{marginTop: '150 px'}}>
         <div className='sweet-loading text-center'>
             <HashLoader color='#000' loading={loading} css='' size={80} />
         </div>

@@ -46,7 +46,7 @@ function Bookingscreen() {
               )}
             </div>
 
-            <div className="col-md-6">
+            <div className="col-md-6"> 
 
               <div style={{ textAlign: 'right' }}>
                 <h1>Booking Details</h1>
